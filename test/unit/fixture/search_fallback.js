@@ -107,11 +107,10 @@ module.exports = {
                     }
                   },
                   {
-                    'match_phrase': {
+                    'match': {
                       'address_parts.street': {
                         'query': 'street value',
-                        'analyzer': 'peliasQuery',
-                        'slop': 4
+                        'fuzziness': 'AUTO'
                       }
                     }
                   },
@@ -275,11 +274,10 @@ module.exports = {
                 'boost': 5,
                 'must': [
                   {
-                    'match_phrase': {
+                    'match': {
                       'address_parts.street': {
                         'query': 'street value',
-                        'analyzer': 'peliasQuery',
-                        'slop': 4
+                        'fuzziness': 'AUTO'
                       }
                     }
                   },
